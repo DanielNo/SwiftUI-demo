@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A640DD82731BC5500E98D2F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DD72731BC5500E98D2F /* CircleImage.swift */; };
+		9A640DDA2731C6D800E98D2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DD92731C6D800E98D2F /* MapView.swift */; };
+		9A640DDC2731F5F500E98D2F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DDB2731F5F500E98D2F /* LoginView.swift */; };
 		9AE7F3AF26D5637B009E0234 /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7F3AE26D5637B009E0234 /* SwiftUIDemoApp.swift */; };
 		9AE7F3B126D5637B009E0234 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7F3B026D5637B009E0234 /* ContentView.swift */; };
 		9AE7F3B326D5637D009E0234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7F3B226D5637D009E0234 /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A640DD72731BC5500E98D2F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		9A640DD92731C6D800E98D2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9A640DDB2731F5F500E98D2F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9AE7F3AB26D5637B009E0234 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE7F3AE26D5637B009E0234 /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
 		9AE7F3B026D5637B009E0234 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,7 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				9AE7F3AE26D5637B009E0234 /* SwiftUIDemoApp.swift */,
+				9A640DDB2731F5F500E98D2F /* LoginView.swift */,
 				9AE7F3B026D5637B009E0234 /* ContentView.swift */,
+				9A640DD72731BC5500E98D2F /* CircleImage.swift */,
+				9A640DD92731C6D800E98D2F /* MapView.swift */,
 				9AE7F3B226D5637D009E0234 /* Assets.xcassets */,
 				9AE7F3B726D5637D009E0234 /* Info.plist */,
 				9AE7F3B426D5637D009E0234 /* Preview Content */,
@@ -260,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE7F3B126D5637B009E0234 /* ContentView.swift in Sources */,
+				9A640DDA2731C6D800E98D2F /* MapView.swift in Sources */,
 				9AE7F3AF26D5637B009E0234 /* SwiftUIDemoApp.swift in Sources */,
+				9A640DDC2731F5F500E98D2F /* LoginView.swift in Sources */,
+				9A640DD82731BC5500E98D2F /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -402,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -421,7 +433,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,7 +454,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +473,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftUIDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +494,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftUIDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
