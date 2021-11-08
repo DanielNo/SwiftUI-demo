@@ -7,13 +7,42 @@
 
 import SwiftUI
 
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        print("did finish launching")
+        
+        return true
+    }
+}
+
+
 @main
 struct SwiftUIDemoApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    @Environment(\.scenePhase) private var scenePhase
+
+
     var body: some Scene {
         WindowGroup {
 //            ContentView()
             
             MainTabBar()
+            
+        }.onChange(of: scenePhase) { newPhase in
+            
+            switch(newPhase){
+            case .active:
+                print("Scene delegate active")
+            case .background:
+                print("Scene delegate background")
+            case .inactive:
+                print("Scene delegate inactive")
+                
+            @unknown default:
+                print("unknown default")
+            }
             
         }
     }
