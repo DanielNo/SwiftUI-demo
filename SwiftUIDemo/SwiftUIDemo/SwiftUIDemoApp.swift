@@ -14,6 +14,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        print("opening url: \(url.absoluteString)")
+        
+        return true
+    }
 }
 
 
@@ -22,15 +28,19 @@ struct SwiftUIDemoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     @Environment(\.scenePhase) private var scenePhase
-
+    
+    let defaults : UserDefaults = {
+        let defaults = UserDefaults.standard
+        defaults.register(defaults: ["Favorites":[]])
+        return defaults
+    }()
+    
 
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            
             MainTabBar()
-            
-        }.onChange(of: scenePhase) { newPhase in
+        }
+        .onChange(of: scenePhase) { newPhase in
             
             switch(newPhase){
             case .active:
@@ -49,23 +59,31 @@ struct SwiftUIDemoApp: App {
 }
 
 struct MainTabBar : View{
+    @StateObject var favorites: FavoritePokemon = FavoritePokemon()
+
     var body: some View {
         TabView {
+            ImageListView()
+                .tabItem {
+                Text("Table")
+            }
+
             LoginView()
                 .tabItem {
-                Text("Tab 1")
+                Text("Login")
             }
 
-            ContentView()
-                .tabItem {
-                Text("Tab 2")
-            }
             MapView()
                 .tabItem{
-                    Text("Tab 3")
+                    Text("Map")
+                }
+            
+            FavoritesView()
+                .tabItem {
+                    Text("Favorites")
                 }
 
-        }
+        }.environmentObject(favorites)
 
         
     }
@@ -74,6 +92,10 @@ struct MainTabBar : View{
 struct SwiftUIDemoApp_PreviewProvider : PreviewProvider{
     static var previews: some View {
         MainTabBar()
+            .previewInterfaceOrientation(.portrait)
+        
+        MainTabBar()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 
 }
