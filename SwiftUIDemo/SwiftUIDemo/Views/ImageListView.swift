@@ -11,7 +11,7 @@ import SwiftUI
 
 // TableView Equivalent
 struct ImageListView : View{
-    @EnvironmentObject var favoritesModel : FavoritesModel
+    @EnvironmentObject var favoritesModel : FavoritePokemon
     
     var body : some View{
         NavigationView{

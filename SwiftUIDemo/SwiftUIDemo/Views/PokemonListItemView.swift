@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PokemonListItemView: View {
     var pokemon : Pokemon
-    @EnvironmentObject var favoritesModel : FavoritesModel
+    @EnvironmentObject var favoritesModel : FavoritePokemon
     var body : some View{
         
         HStack{

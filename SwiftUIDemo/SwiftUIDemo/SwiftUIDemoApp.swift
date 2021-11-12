@@ -35,7 +35,7 @@ struct SwiftUIDemoApp: App {
         return defaults
     }()
     
-    @StateObject var favoritesModel : FavoritesModel = FavoritesModel()
+    @StateObject var favoritesModel : FavoritePokemon = FavoritePokemon()
 
 
     var body: some Scene {

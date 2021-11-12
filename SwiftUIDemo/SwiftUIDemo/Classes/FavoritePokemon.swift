@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-public class FavoritesModel : ObservableObject{
+public class FavoritePokemon : ObservableObject{
     @AppStorage("favorites", store:.standard) var favoritesArray : [Pokemon] = []
 
     func toggleFavorite(_ pokemon : Pokemon){
@@ -45,34 +45,6 @@ public class FavoritesModel : ObservableObject{
             return false
         }
         
-    }
-    
-    
-}
-
-public class FavoritePokemon : ObservableObject{
-    @Published var favorites : [Int:Int]
-    private var defaults : UserDefaults
-    
-    @AppStorage("should_show_hello_world", store: .standard) var shouldShowHelloWorld: Bool = false
-
-    init(){
-        defaults = UserDefaults.standard
-        defaults.register(defaults: ["favorites" : [:]])
-        let favs = defaults.dictionary(forKey: "favorites") as? [Int:Int] ?? [:]
-        favorites = favs
-        
-    }
-    
-    func addFavorite(_ pokemon : Pokemon){
-        let id = pokemon.id
-        favorites[id] = 1
-        defaults.setValue(favorites, forKey: "favorites")
-    }
-    
-    func removeFavorite(_ pokemon : Pokemon){
-        favorites[pokemon.id] = 0
-        defaults.setValue(favorites, forKey: "favorites")
     }
     
     

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @EnvironmentObject var favoritesModel : FavoritesModel
+    @EnvironmentObject var favoritesModel : FavoritePokemon
     
     var body: some View {
         List{
