@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A498805273C808200833F43 /* UserRegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498804273C808200833F43 /* UserRegistrationData.swift */; };
 		9A640DD82731BC5500E98D2F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DD72731BC5500E98D2F /* CircleImage.swift */; };
 		9A640DDA2731C6D800E98D2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DD92731C6D800E98D2F /* MapView.swift */; };
 		9A640DDC2731F5F500E98D2F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DDB2731F5F500E98D2F /* LoginView.swift */; };
@@ -21,6 +22,8 @@
 		9AE7F3C126D5637D009E0234 /* SwiftUIDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7F3C026D5637D009E0234 /* SwiftUIDemoTests.swift */; };
 		9AE7F3CC26D5637D009E0234 /* SwiftUIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7F3CB26D5637D009E0234 /* SwiftUIDemoUITests.swift */; };
 		9AEC4BA227333220000F201A /* LoginView_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC4BA127333220000F201A /* LoginView_Tests.swift */; };
+		9AFE6CD7273F2F1600AEB833 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE6CD6273F2F1600AEB833 /* Array+Extensions.swift */; };
+		9AFE6CD9273F2F2D00AEB833 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE6CD8273F2F2D00AEB833 /* Dictionary+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A498804273C808200833F43 /* UserRegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationData.swift; sourceTree = "<group>"; };
 		9A640DD72731BC5500E98D2F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		9A640DD92731C6D800E98D2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		9A640DDB2731F5F500E98D2F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		9AE7F3CB26D5637D009E0234 /* SwiftUIDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoUITests.swift; sourceTree = "<group>"; };
 		9AE7F3CD26D5637D009E0234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AEC4BA127333220000F201A /* LoginView_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView_Tests.swift; sourceTree = "<group>"; };
+		9AFE6CD6273F2F1600AEB833 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		9AFE6CD8273F2F2D00AEB833 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9A9AB1C8273B0BCC00890974 /* Pokemon.swift */,
+				9A498804273C808200833F43 /* UserRegistrationData.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 		9AE7F3AD26D5637B009E0234 /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9AFE6CD5273F2F0600AEB833 /* Extensions */,
 				9AE7F3AE26D5637B009E0234 /* SwiftUIDemoApp.swift */,
 				9A9AB1CB273B0BDC00890974 /* Views */,
 				9A9AB1CA273B0BD400890974 /* Data Model */,
@@ -176,6 +184,15 @@
 				9AE7F3CD26D5637D009E0234 /* Info.plist */,
 			);
 			path = SwiftUIDemoUITests;
+			sourceTree = "<group>";
+		};
+		9AFE6CD5273F2F0600AEB833 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9AFE6CD6273F2F1600AEB833 /* Array+Extensions.swift */,
+				9AFE6CD8273F2F2D00AEB833 /* Dictionary+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,12 +327,15 @@
 				9A9AB1D0273B799200890974 /* PokemonListItemView.swift in Sources */,
 				9A9AB1C9273B0BCC00890974 /* Pokemon.swift in Sources */,
 				9A9AB1CE273B0D4700890974 /* FavoritePokemon.swift in Sources */,
+				9AFE6CD7273F2F1600AEB833 /* Array+Extensions.swift in Sources */,
 				9A640DDA2731C6D800E98D2F /* MapView.swift in Sources */,
 				9AE7F3AF26D5637B009E0234 /* SwiftUIDemoApp.swift in Sources */,
 				9A9AB1C7273B0B4200890974 /* FavoritesView.swift in Sources */,
 				9A640DDC2731F5F500E98D2F /* LoginView.swift in Sources */,
+				9A498805273C808200833F43 /* UserRegistrationData.swift in Sources */,
 				9A9AB1C52739A2B500890974 /* ImageListView.swift in Sources */,
 				9A640DD82731BC5500E98D2F /* CircleImage.swift in Sources */,
+				9AFE6CD9273F2F2D00AEB833 /* Dictionary+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

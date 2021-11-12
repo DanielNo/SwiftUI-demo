@@ -35,10 +35,12 @@ struct SwiftUIDemoApp: App {
         return defaults
     }()
     
+    @StateObject var favoritesModel : FavoritesModel = FavoritesModel()
+
 
     var body: some Scene {
         WindowGroup {
-            MainTabBar()
+            MainTabBar().environmentObject(favoritesModel)
         }
         .onChange(of: scenePhase) { newPhase in
             
@@ -59,7 +61,7 @@ struct SwiftUIDemoApp: App {
 }
 
 struct MainTabBar : View{
-    @StateObject var favorites: FavoritePokemon = FavoritePokemon()
+//    @StateObject var favorites: FavoritePokemon = FavoritePokemon()
 
     var body: some View {
         TabView {
@@ -73,17 +75,17 @@ struct MainTabBar : View{
                 Text("Login")
             }
 
-            MapView()
-                .tabItem{
-                    Text("Map")
-                }
+//            MapView()
+//                .tabItem{
+//                    Text("Map")
+//                }
             
             FavoritesView()
                 .tabItem {
                     Text("Favorites")
                 }
 
-        }.environmentObject(favorites)
+        }
 
         
     }

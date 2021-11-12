@@ -11,13 +11,14 @@ import SwiftUI
 
 // TableView Equivalent
 struct ImageListView : View{
+    @EnvironmentObject var favoritesModel : FavoritesModel
     
     var body : some View{
         NavigationView{
             List{
                 ForEach(1..<150){ row in
                     NavigationLink(destination: PokemonDetailView(number: row).navigationTitle("\(row)"), label: {
-                        PokemonListItemView(number: row)
+                        PokemonListItemView(pokemon: Pokemon(id: row))
                     })
                         .frame(height: 100, alignment: .trailing)
                         .background(Color.green)

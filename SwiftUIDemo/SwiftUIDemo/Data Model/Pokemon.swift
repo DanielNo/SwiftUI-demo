@@ -7,7 +7,11 @@
 
 import Foundation
 
-public struct Pokemon : Identifiable{
+public struct Pokemon : Identifiable, Codable,Equatable{
     public var id : Int
 
+    public static func == (lhs: Self, rhs: Self) -> Bool{
+        return lhs.id == rhs.id
+        
+    }
 }

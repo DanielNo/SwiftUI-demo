@@ -8,67 +8,82 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var username : String = ""
-    @State var password : String = ""
-    
+    @StateObject var userRegData : UserRegistrationData = UserRegistrationData()
+
     @State var agreeToTerms : Bool = false
     
     @State var alertPresented : Bool = false
     @State var alertMessage : String = ""
+    
 
     var body: some View {
         VStack(alignment: .center, spacing: 20, content: {
             Form{
-                TextField("title", text: $username, prompt: Text("Username"))
-                SecureField("a", text: $password, prompt: Text("Password"))
-                    .onSubmit {
-                        login()
-                    }
+                Group{
+                    TextField("title", text: $userRegData.username, prompt: Text("Username"))
+                        .keyboardType(.emailAddress)
+                    SecureField("a", text: $userRegData.password, prompt: Text("Password"))
+                        .keyboardType(.default)
+                    TextField("title", text: $userRegData.numberPasscode, prompt: Text("#### Passcode"))
+                        .keyboardType(.numberPad)
+
+                }.onSubmit {
+                    login()
+                }.submitLabel(.go)
                 
             }
-            Button {
-                login()
-            } label: {
-                HStack{
-                Text("Submit")
-                    Image(systemName: "pencil")
-                }
-                .padding(20)
-                .background(Color.yellow)
-                .cornerRadius(10)
-            }.alert("Title", isPresented: $alertPresented) {
-                Button("ok") {
-                    alertPresented = false
-                }
-            } message: {
-                Text(alertMessage)
-            }
+            submitButton()
             Spacer()
-
+        
         })
 
+        
+        
     }
     
-    private struct LoginUIView : View{
+    
+    private struct SubmitButton : View{
+        var closureMethod : ()->()
         var body : some View{
             
             return Text("")
         }
     }
-    
-    
 }
 
+
 extension LoginView{
+    
+    func submitButton() -> some View{
+        Button {
+            login()
+        } label: {
+            HStack{
+            Text("Submit")
+                Image(systemName: "pencil")
+            }
+            .padding(20)
+            .background(Color.yellow)
+            .cornerRadius(10)
+        }.alert("Title", isPresented: $alertPresented) {
+            Button("ok") {
+                alertPresented = false
+            }
+        } message: {
+            Text(alertMessage)
+        }
+
+    }
+    
     func login(){
-        guard username.count > 0 else{
+        guard userRegData.username.count > 0 else{
             alertMessage = "Invalid username"
 
             alertPresented = true
             return
         }
         
-        guard password.count > 0 else{
+        guard userRegData.password.count > 0 else{
             alertMessage = "Invalid password"
 
             alertPresented = true

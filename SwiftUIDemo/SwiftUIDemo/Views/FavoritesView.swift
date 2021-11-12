@@ -8,17 +8,14 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @EnvironmentObject var favs: FavoritePokemon
-    var keys : [Int] {
-        return Array(favs.favorites.keys)
-    }
+    @EnvironmentObject var favoritesModel : FavoritesModel
     
     var body: some View {
         List{
-            ForEach(favs.favorites.filter({ key,val in
-                val == 1
-            }).sorted(by: >), id: \.key) { key, value in
-                PokemonListItemView(number: key)
+            
+            ForEach(favoritesModel.favoritesArray) { p in
+                PokemonListItemView(pokemon: p)
+
             }
         }.navigationTitle("My favorite Pokemon")
 

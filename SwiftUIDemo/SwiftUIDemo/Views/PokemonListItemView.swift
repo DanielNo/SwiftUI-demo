@@ -8,24 +8,27 @@
 import SwiftUI
 
 struct PokemonListItemView: View {
-    @State var number : Int = 0
-    @EnvironmentObject var favorites : FavoritePokemon
+    var pokemon : Pokemon
+    @EnvironmentObject var favoritesModel : FavoritesModel
     var body : some View{
         
         HStack{
             Spacer(minLength: 50)
             GeometryReader { geoProxy in
-                Image("\(self.imageName(number))", bundle: .main)
+                Image("\(self.imageName(pokemon.id))", bundle: .main)
                     .resizable()
                     .scaledToFit()
             }
             .background(Color.red)
             Spacer()
             Button {
-//                favorites.
+                favoritesModel.toggleFavorite(pokemon)
             } label: {
-                Image(systemName: "heart.fill")
-            }
+                let image = favoritesModel.isFavorite(pokemon) ? "heart.fill" : "heart"
+                Image(systemName: image)
+            }.buttonStyle(.plain)
+            
+            
 
             
             Spacer(minLength: 40)
@@ -46,6 +49,6 @@ struct PokemonListItemView: View {
 
 struct PokemonListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonListItemView()
+        PokemonListItemView(pokemon: Pokemon(id: 150))
     }
 }
