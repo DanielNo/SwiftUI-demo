@@ -20,18 +20,24 @@ struct PokemonListItemView: View {
                     .scaledToFit()
             }
             .background(Color.red)
-            Spacer()
+            Spacer(minLength: 80)
+        
             Button {
                 favoritesModel.toggleFavorite(pokemon)
             } label: {
                 let image = favoritesModel.isFavorite(pokemon) ? "heart.fill" : "heart"
                 Image(systemName: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40, alignment: .center)
             }.buttonStyle(.plain)
-            
+//                .frame(width: 50, height: 50, alignment: .center)
+//                .scaledToFill()
+                .background(Color.orange)
             
 
             
-            Spacer(minLength: 40)
+            Spacer(minLength: 20)
             
         }
     }

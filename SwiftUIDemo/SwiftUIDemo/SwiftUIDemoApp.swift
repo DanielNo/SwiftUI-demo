@@ -37,7 +37,6 @@ struct SwiftUIDemoApp: App {
     
     @StateObject var favoritesModel : FavoritePokemon = FavoritePokemon()
 
-
     var body: some Scene {
         WindowGroup {
             MainTabBar().environmentObject(favoritesModel)
@@ -61,7 +60,7 @@ struct SwiftUIDemoApp: App {
 }
 
 struct MainTabBar : View{
-//    @StateObject var favorites: FavoritePokemon = FavoritePokemon()
+    @EnvironmentObject var favoritesModel : FavoritePokemon
 
     var body: some View {
         TabView {
@@ -95,9 +94,12 @@ struct SwiftUIDemoApp_PreviewProvider : PreviewProvider{
     static var previews: some View {
         MainTabBar()
             .previewInterfaceOrientation(.portrait)
+            .environmentObject(FavoritePokemon())
         
         MainTabBar()
             .previewInterfaceOrientation(.landscapeLeft)
+            .environmentObject(FavoritePokemon())
+
     }
 
 }

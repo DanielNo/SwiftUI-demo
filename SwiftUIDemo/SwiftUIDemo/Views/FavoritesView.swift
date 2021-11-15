@@ -23,7 +23,15 @@ struct FavoritesView: View {
 }
 
 struct FavoritesView_Previews: PreviewProvider {
+
     static var previews: some View {
-        FavoritesView()
+        MainTabBar()
+            .previewInterfaceOrientation(.portrait)
+            .environmentObject(FavoritePokemon())
+        
+        
+        MainTabBar()
+            .previewInterfaceOrientation(.landscapeLeft)
+            .environmentObject(FavoritePokemon())
     }
 }
