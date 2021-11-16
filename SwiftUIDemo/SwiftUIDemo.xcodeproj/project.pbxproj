@@ -24,6 +24,8 @@
 		9AEC4BA227333220000F201A /* LoginView_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC4BA127333220000F201A /* LoginView_Tests.swift */; };
 		9AFE6CD7273F2F1600AEB833 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE6CD6273F2F1600AEB833 /* Array+Extensions.swift */; };
 		9AFE6CD9273F2F2D00AEB833 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE6CD8273F2F2D00AEB833 /* Dictionary+Extensions.swift */; };
+		9AFE6CDB2743050200AEB833 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE6CDA2743050200AEB833 /* AppRouter.swift */; };
+		9AFE6CDF2743135900AEB833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE6CDE2743135900AEB833 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		9AEC4BA127333220000F201A /* LoginView_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView_Tests.swift; sourceTree = "<group>"; };
 		9AFE6CD6273F2F1600AEB833 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		9AFE6CD8273F2F2D00AEB833 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		9AFE6CDA2743050200AEB833 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		9AFE6CDE2743135900AEB833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 			children = (
 				9AFE6CD5273F2F0600AEB833 /* Extensions */,
 				9AE7F3AE26D5637B009E0234 /* SwiftUIDemoApp.swift */,
+				9AFE6CDA2743050200AEB833 /* AppRouter.swift */,
+				9AFE6CDE2743135900AEB833 /* AppDelegate.swift */,
 				9A9AB1CB273B0BDC00890974 /* Views */,
 				9A9AB1CA273B0BD400890974 /* Data Model */,
 				9A9AB1CC273B0D3400890974 /* Classes */,
@@ -326,6 +332,7 @@
 			files = (
 				9A9AB1D0273B799200890974 /* PokemonListItemView.swift in Sources */,
 				9A9AB1C9273B0BCC00890974 /* Pokemon.swift in Sources */,
+				9AFE6CDF2743135900AEB833 /* AppDelegate.swift in Sources */,
 				9A9AB1CE273B0D4700890974 /* FavoritePokemon.swift in Sources */,
 				9AFE6CD7273F2F1600AEB833 /* Array+Extensions.swift in Sources */,
 				9A640DDA2731C6D800E98D2F /* MapView.swift in Sources */,
@@ -334,6 +341,7 @@
 				9A640DDC2731F5F500E98D2F /* LoginView.swift in Sources */,
 				9A498805273C808200833F43 /* UserRegistrationData.swift in Sources */,
 				9A9AB1C52739A2B500890974 /* ImageListView.swift in Sources */,
+				9AFE6CDB2743050200AEB833 /* AppRouter.swift in Sources */,
 				9A640DD82731BC5500E98D2F /* CircleImage.swift in Sources */,
 				9AFE6CD9273F2F2D00AEB833 /* Dictionary+Extensions.swift in Sources */,
 			);

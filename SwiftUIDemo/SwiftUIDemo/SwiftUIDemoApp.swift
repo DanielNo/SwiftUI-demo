@@ -6,21 +6,7 @@
 //
 
 import SwiftUI
-
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
-        print("did finish launching")
-        
-        return true
-    }
-    
-    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-        print("opening url: \(url.absoluteString)")
-        
-        return true
-    }
-}
+import Foundation
 
 
 @main
@@ -28,18 +14,18 @@ struct SwiftUIDemoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     @Environment(\.scenePhase) private var scenePhase
-    
-    let defaults : UserDefaults = {
-        let defaults = UserDefaults.standard
-        defaults.register(defaults: ["Favorites":[]])
-        return defaults
-    }()
-    
+        
     @StateObject var favoritesModel : FavoritePokemon = FavoritePokemon()
+    @StateObject var router : AppRouter = AppRouter()
 
     var body: some Scene {
         WindowGroup {
-            MainTabBar().environmentObject(favoritesModel)
+            MainTabBar()
+                .environmentObject(favoritesModel)
+                .environmentObject(router)
+                .onOpenURL { url in
+                    self.handleDeepLink(url)
+                }
         }
         .onChange(of: scenePhase) { newPhase in
             
@@ -50,6 +36,7 @@ struct SwiftUIDemoApp: App {
                 print("Scene delegate background")
             case .inactive:
                 print("Scene delegate inactive")
+
                 
             @unknown default:
                 print("unknown default")
@@ -57,48 +44,69 @@ struct SwiftUIDemoApp: App {
             
         }
     }
+    
+    func handleDeepLink(_ url : URL){
+        let nsur = url as? NSURL
+        let lastp = nsur?.lastPathComponent
+        print("opening url : \(url)")
+        
+        // fix this parsing, but this is a working solution
+        router.path = RouterPath.ThirdTab.rawValue
+        
+    }
+    
+    
+    
 }
+
 
 struct MainTabBar : View{
     @EnvironmentObject var favoritesModel : FavoritePokemon
+    @EnvironmentObject var router : AppRouter
 
     var body: some View {
-        TabView {
+        TabView(selection: $router.path) {
+            
             ImageListView()
                 .tabItem {
                 Text("Table")
-            }
+                }
+                .tag(RouterPath.FirstTab.rawValue)
 
             LoginView()
                 .tabItem {
                 Text("Login")
             }
+                .tag(RouterPath.SecondTab.rawValue)
 
-//            MapView()
-//                .tabItem{
-//                    Text("Map")
-//                }
-            
             FavoritesView()
                 .tabItem {
                     Text("Favorites")
                 }
+                .tag(RouterPath.ThirdTab.rawValue)
+
 
         }
-
-        
     }
+    
+    
+    
 }
 
 struct SwiftUIDemoApp_PreviewProvider : PreviewProvider{
+    let favoriteEnvObj = FavoritePokemon()
     static var previews: some View {
-        MainTabBar()
-            .previewInterfaceOrientation(.portrait)
-            .environmentObject(FavoritePokemon())
-        
+//        MainTabBar(selectedItem: 1)
+//            .previewInterfaceOrientation(.portrait)
+//            .environmentObject(FavoritePokemon())
+
         MainTabBar()
             .previewInterfaceOrientation(.landscapeLeft)
             .environmentObject(FavoritePokemon())
+
+//        MainTabBar()
+//            .previewInterfaceOrientation(.landscapeLeft)
+//            .environmentObject(FavoritePokemon())
 
     }
 
