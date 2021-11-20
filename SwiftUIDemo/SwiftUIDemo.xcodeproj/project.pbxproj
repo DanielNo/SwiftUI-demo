@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		9A9AB1C9273B0BCC00890974 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AB1C8273B0BCC00890974 /* Pokemon.swift */; };
 		9A9AB1CE273B0D4700890974 /* FavoritePokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AB1CD273B0D4700890974 /* FavoritePokemon.swift */; };
 		9A9AB1D0273B799200890974 /* PokemonListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9AB1CF273B799200890974 /* PokemonListItemView.swift */; };
+		9AA605BE27481387007E5932 /* ImageLoaderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA605BD27481387007E5932 /* ImageLoaderListView.swift */; };
+		9AA605C12748A6E2007E5932 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 9AA605C02748A6E2007E5932 /* Shimmer */; };
+		9AA605C32748AC94007E5932 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA605C22748AC94007E5932 /* Picture.swift */; };
 		9AE7F3AF26D5637B009E0234 /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7F3AE26D5637B009E0234 /* SwiftUIDemoApp.swift */; };
 		9AE7F3B326D5637D009E0234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7F3B226D5637D009E0234 /* Assets.xcassets */; };
 		9AE7F3B626D5637D009E0234 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7F3B526D5637D009E0234 /* Preview Assets.xcassets */; };
@@ -55,6 +58,8 @@
 		9A9AB1C8273B0BCC00890974 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		9A9AB1CD273B0D4700890974 /* FavoritePokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePokemon.swift; sourceTree = "<group>"; };
 		9A9AB1CF273B799200890974 /* PokemonListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListItemView.swift; sourceTree = "<group>"; };
+		9AA605BD27481387007E5932 /* ImageLoaderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderListView.swift; sourceTree = "<group>"; };
+		9AA605C22748AC94007E5932 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		9AE7F3AB26D5637B009E0234 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE7F3AE26D5637B009E0234 /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
 		9AE7F3B226D5637D009E0234 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA605C12748A6E2007E5932 /* Shimmer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +109,7 @@
 			children = (
 				9A9AB1C8273B0BCC00890974 /* Pokemon.swift */,
 				9A498804273C808200833F43 /* UserRegistrationData.swift */,
+				9AA605C22748AC94007E5932 /* Picture.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 				9A640DD72731BC5500E98D2F /* CircleImage.swift */,
 				9A640DD92731C6D800E98D2F /* MapView.swift */,
 				9A9AB1CF273B799200890974 /* PokemonListItemView.swift */,
+				9AA605BD27481387007E5932 /* ImageLoaderListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +225,9 @@
 			dependencies = (
 			);
 			name = SwiftUIDemo;
+			packageProductDependencies = (
+				9AA605C02748A6E2007E5932 /* Shimmer */,
+			);
 			productName = SwiftUIDemo;
 			productReference = 9AE7F3AB26D5637B009E0234 /* SwiftUIDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -288,6 +299,9 @@
 				Base,
 			);
 			mainGroup = 9AE7F3A226D5637B009E0234;
+			packageReferences = (
+				9AA605BF2748A6E2007E5932 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+			);
 			productRefGroup = 9AE7F3AC26D5637B009E0234 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,6 +348,7 @@
 				9A9AB1C9273B0BCC00890974 /* Pokemon.swift in Sources */,
 				9AFE6CDF2743135900AEB833 /* AppDelegate.swift in Sources */,
 				9A9AB1CE273B0D4700890974 /* FavoritePokemon.swift in Sources */,
+				9AA605C32748AC94007E5932 /* Picture.swift in Sources */,
 				9AFE6CD7273F2F1600AEB833 /* Array+Extensions.swift in Sources */,
 				9A640DDA2731C6D800E98D2F /* MapView.swift in Sources */,
 				9AE7F3AF26D5637B009E0234 /* SwiftUIDemoApp.swift in Sources */,
@@ -343,6 +358,7 @@
 				9A9AB1C52739A2B500890974 /* ImageListView.swift in Sources */,
 				9AFE6CDB2743050200AEB833 /* AppRouter.swift in Sources */,
 				9A640DD82731BC5500E98D2F /* CircleImage.swift in Sources */,
+				9AA605BE27481387007E5932 /* ImageLoaderListView.swift in Sources */,
 				9AFE6CD9273F2F2D00AEB833 /* Dictionary+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9AA605BF2748A6E2007E5932 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9AA605C02748A6E2007E5932 /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AA605BF2748A6E2007E5932 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9AE7F3A326D5637B009E0234 /* Project object */;
 }

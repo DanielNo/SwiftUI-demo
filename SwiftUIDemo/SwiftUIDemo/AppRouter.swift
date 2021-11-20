@@ -17,7 +17,8 @@ enum RouterPath : Int, Hashable{
 }
 
 class AppRouter : ObservableObject{
-    @Published var path : Int = RouterPath.SecondTab.rawValue    
-    
+//    @Published var path : Int = RouterPath.SecondTab.rawValue
+    @Published var path : Int = RouterPath.FirstTab.rawValue
+
 }
 

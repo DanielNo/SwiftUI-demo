@@ -66,24 +66,29 @@ struct MainTabBar : View{
 
     var body: some View {
         TabView(selection: $router.path) {
+            ImageLoaderListView()
+                .tabItem {
+                    Text("Favorites")
+                }
+                .tag(RouterPath.FirstTab.rawValue)
             
             ImageListView()
                 .tabItem {
                 Text("Table")
                 }
-                .tag(RouterPath.FirstTab.rawValue)
+                .tag(RouterPath.SecondTab.rawValue)
 
             LoginView()
                 .tabItem {
                 Text("Login")
             }
-                .tag(RouterPath.SecondTab.rawValue)
+                .tag(RouterPath.ThirdTab.rawValue)
 
             FavoritesView()
                 .tabItem {
                     Text("Favorites")
                 }
-                .tag(RouterPath.ThirdTab.rawValue)
+                .tag(RouterPath.FourthTab.rawValue)
 
 
         }
