@@ -38,8 +38,8 @@ public struct ImageLoaderListView : View{
             }
             
         }.onAppear {
-//            client.getImageList()
-            client.getStaticImageList()
+            client.getImageList()
+//            client.getStaticImageList()
 //            let pub = client.makeAGenericPublisher()
             
         }
@@ -86,7 +86,7 @@ public class PictureClient : ObservableObject{
                 return element.data
             }
             .decode(type: [Picture].self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
+            .receive(on: RunLoop.main)
             .sink { completion in
 //                print("completion : \(completion)")
             } receiveValue: { value in

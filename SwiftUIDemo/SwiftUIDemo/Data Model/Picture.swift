@@ -38,7 +38,10 @@ public struct Picture : Decodable, Identifiable{
         height = 250
         url = try values.decode(String.self, forKey: .url)
         download_url = try values.decode(String.self, forKey: .download_url)
-        imageUrl = URL(string: download_url)
+        let testURL = URL(string: download_url)?.deletingLastPathComponent().deletingLastPathComponent().absoluteString.appending("\(width)/\(height)")
+        
+//        imageUrl = URL(string: download_url)
+        imageUrl = URL(string: testURL ?? "")
 
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A31CB382755397600CB764F /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31CB372755397600CB764F /* PieChart.swift */; };
 		9A498805273C808200833F43 /* UserRegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498804273C808200833F43 /* UserRegistrationData.swift */; };
 		9A640DD82731BC5500E98D2F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DD72731BC5500E98D2F /* CircleImage.swift */; };
 		9A640DDA2731C6D800E98D2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DD92731C6D800E98D2F /* MapView.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A31CB372755397600CB764F /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		9A498804273C808200833F43 /* UserRegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationData.swift; sourceTree = "<group>"; };
 		9A640DD72731BC5500E98D2F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		9A640DD92731C6D800E98D2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				9A640DDB2731F5F500E98D2F /* LoginView.swift */,
 				9A9AB1C42739A2B500890974 /* ImageListView.swift */,
 				9A640DD72731BC5500E98D2F /* CircleImage.swift */,
+				9A31CB372755397600CB764F /* PieChart.swift */,
 				9A640DD92731C6D800E98D2F /* MapView.swift */,
 				9A9AB1CF273B799200890974 /* PokemonListItemView.swift */,
 				9AA605BD27481387007E5932 /* ImageLoaderListView.swift */,
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9AB1D0273B799200890974 /* PokemonListItemView.swift in Sources */,
+				9A31CB382755397600CB764F /* PieChart.swift in Sources */,
 				9A9AB1C9273B0BCC00890974 /* Pokemon.swift in Sources */,
 				9AFE6CDF2743135900AEB833 /* AppDelegate.swift in Sources */,
 				9A9AB1CE273B0D4700890974 /* FavoritePokemon.swift in Sources */,
