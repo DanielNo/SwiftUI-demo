@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A31CB382755397600CB764F /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A31CB372755397600CB764F /* PieChart.swift */; };
-		9A498805273C808200833F43 /* UserRegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498804273C808200833F43 /* UserRegistrationData.swift */; };
+		9A498805273C808200833F43 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498804273C808200833F43 /* Authenticator.swift */; };
 		9A640DD82731BC5500E98D2F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DD72731BC5500E98D2F /* CircleImage.swift */; };
 		9A640DDA2731C6D800E98D2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DD92731C6D800E98D2F /* MapView.swift */; };
 		9A640DDC2731F5F500E98D2F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A640DDB2731F5F500E98D2F /* LoginView.swift */; };
@@ -50,8 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0233A0C62905A930003A3C83 /* SwiftUIDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIDemo.entitlements; sourceTree = "<group>"; };
 		9A31CB372755397600CB764F /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
-		9A498804273C808200833F43 /* UserRegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationData.swift; sourceTree = "<group>"; };
+		9A498804273C808200833F43 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		9A640DD72731BC5500E98D2F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		9A640DD92731C6D800E98D2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		9A640DDB2731F5F500E98D2F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -110,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				9A9AB1C8273B0BCC00890974 /* Pokemon.swift */,
-				9A498804273C808200833F43 /* UserRegistrationData.swift */,
+				9A498804273C808200833F43 /* Authenticator.swift */,
 				9AA605C22748AC94007E5932 /* Picture.swift */,
 			);
 			path = "Data Model";
@@ -162,6 +163,7 @@
 		9AE7F3AD26D5637B009E0234 /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0233A0C62905A930003A3C83 /* SwiftUIDemo.entitlements */,
 				9AFE6CD5273F2F0600AEB833 /* Extensions */,
 				9AE7F3AE26D5637B009E0234 /* SwiftUIDemoApp.swift */,
 				9AFE6CDA2743050200AEB833 /* AppRouter.swift */,
@@ -358,7 +360,7 @@
 				9AE7F3AF26D5637B009E0234 /* SwiftUIDemoApp.swift in Sources */,
 				9A9AB1C7273B0B4200890974 /* FavoritesView.swift in Sources */,
 				9A640DDC2731F5F500E98D2F /* LoginView.swift in Sources */,
-				9A498805273C808200833F43 /* UserRegistrationData.swift in Sources */,
+				9A498805273C808200833F43 /* Authenticator.swift in Sources */,
 				9A9AB1C52739A2B500890974 /* ImageListView.swift in Sources */,
 				9AFE6CDB2743050200AEB833 /* AppRouter.swift in Sources */,
 				9A640DD82731BC5500E98D2F /* CircleImage.swift in Sources */,
@@ -521,6 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIDemo/SwiftUIDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
@@ -542,6 +545,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIDemo/SwiftUIDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;

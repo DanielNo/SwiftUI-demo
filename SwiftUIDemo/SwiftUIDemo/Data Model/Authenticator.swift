@@ -1,5 +1,5 @@
 //
-//  UserRegistrationData.swift
+//  Authenicator.swift
 //  SwiftUIDemo
 //
 //  Created by Daniel No on 11/10/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class UserRegistrationData : ObservableObject{
+final class Authenticator : ObservableObject{
     @Published var username : String = ""
     @Published var password : String = ""
     

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var userRegData : UserRegistrationData = UserRegistrationData()
+    @StateObject var authenticator : Authenticator = Authenticator()
 
     @State var agreeToTerms : Bool = false
     
@@ -22,10 +22,20 @@ struct LoginView: View {
                 Group{
                     TextField("title", text: $userRegData.username, prompt: Text("Username"))
                         .keyboardType(.emailAddress)
+                        .textContentType(.username)
                     SecureField("a", text: $userRegData.password, prompt: Text("Password"))
                         .keyboardType(.default)
-                    TextField("title", text: $userRegData.numberPasscode, prompt: Text("#### Passcode"))
-                        .keyboardType(.numberPad)
+                        .textContentType(.password)
+                    Button {
+                        authenticator.login
+                        
+                    } label: {
+                        Text("Biometrics login")
+                    }
+
+
+//                    TextField("title", text: $userRegData.numberPasscode, prompt: Text("#### Passcode"))
+//                        .keyboardType(.numberPad)
 
                 }.onSubmit {
                     login()
@@ -93,7 +103,7 @@ extension LoginView{
 
         print("logging in")
     }
-
+    
 }
 
 struct LoginView_Previews: PreviewProvider {
