@@ -38,7 +38,7 @@ struct PieView : InsettableShape{
     func inset(by amount: CGFloat) -> some InsettableShape {
         var arc = self
         arc.inset(by: 10)
-        
+        return arc
     }
     
     

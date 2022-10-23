@@ -20,14 +20,14 @@ struct LoginView: View {
         VStack(alignment: .center, spacing: 20, content: {
             Form{
                 Group{
-                    TextField("title", text: $userRegData.username, prompt: Text("Username"))
+                    TextField("title", text: $authenticator.username, prompt: Text("Username"))
                         .keyboardType(.emailAddress)
                         .textContentType(.username)
-                    SecureField("a", text: $userRegData.password, prompt: Text("Password"))
+                    SecureField("a", text: $authenticator.password, prompt: Text("Password"))
                         .keyboardType(.default)
                         .textContentType(.password)
                     Button {
-                        authenticator.login
+//                        authenticator.login
                         
                     } label: {
                         Text("Biometrics login")
@@ -86,14 +86,14 @@ extension LoginView{
     }
     
     func login(){
-        guard userRegData.username.count > 0 else{
+        guard authenticator.username.count > 0 else{
             alertMessage = "Invalid username"
 
             alertPresented = true
             return
         }
         
-        guard userRegData.password.count > 0 else{
+        guard authenticator.password.count > 0 else{
             alertMessage = "Invalid password"
 
             alertPresented = true
