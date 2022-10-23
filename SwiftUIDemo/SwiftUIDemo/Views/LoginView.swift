@@ -23,9 +23,12 @@ struct LoginView: View {
                     TextField("title", text: $authenticator.username, prompt: Text("Username"))
                         .keyboardType(.emailAddress)
                         .textContentType(.username)
+                        .autocapitalization(.none)
                     SecureField("a", text: $authenticator.password, prompt: Text("Password"))
                         .keyboardType(.default)
                         .textContentType(.password)
+                        .autocapitalization(.none)
+
                     Button {
 //                        authenticator.login
                         
